@@ -12,10 +12,10 @@
 <body>
    
     <ion-app>
-        
+        <!--header starts-->
         <ion-header>
             <ion-toolbar color="dark">
-                
+                <!--logo-->
                 <ion-avatar slot="start">
                     <img src="Photos/logo.png">
                 </ion-avatar>
@@ -23,6 +23,7 @@
             </ion-toolbar>
         </ion-header>
 
+        <!--content starts-->
         <ion-content color="light">
             <ion-list>
                 <ion-list-header>
@@ -30,7 +31,8 @@
                 </ion-list-header>
           </ion-list>
 
-            <ion-card>
+          <!--picture of the day-->
+            <ion-card style="margin-bottom:20%;"> 
                 <ion-card-header>
                     <ion-card-title id="img-title" class="small ion-text-center">Today's picture of the day</ion-card-title>
                     <p class="ion-text-center">Orion over Green Bank by Dave Green</p>
@@ -43,37 +45,39 @@
                         <ion-col size="3"></ion-col>
                         <ion-col size="3">
                             <ion-button id="btn-learn-more" color="dark" href="imgInfo.html">Get more info</ion-button>
-                        </ion-col>
+                        </ion-col> <!--button centred-->
                         <ion-col size="3"></ion-col>
                     </ion-row>
-
                 </ion-card-content>
             </ion-card>
 
-            <ion-list>     
-                <ion-item>       
-                    <ion-tab-button href="asteroids.html">
-                        <ion-icon name="rocket-outline"></ion-icon>
-                        <ion-label>Asteroids</ion-label>
-                    </ion-tab-button>
-                
-                    <ion-tab-button href="index.html">
-                        <ion-icon name="home-outline"></ion-icon>
-                        <ion-label>Home</ion-label>
-                    </ion-tab-button>
 
-                    <ion-tab-button href="imgInfo.html">
-                        <ion-icon name="planet-outline"></ion-icon>
-                        <ion-label>Pictures</ion-label>
-                    </ion-tab-button>
-                
-                    <ion-tab-button href="news.html">
-                        <ion-icon name="newspaper-outline"></ion-icon>
-                        <ion-label>News</ion-label>
-                    </ion-tab-button>
-                </ion-item>
-                
-            </ion-list> 
+            <!--botttom nav bar-->
+            <div style="bottom:0; position:fixed; z-index:150; width:100%; _position:absolute;">
+                <ion-list>     
+                    <ion-item>       
+                        <ion-tab-button href="asteroids.html">
+                            <ion-icon name="rocket-outline"></ion-icon>
+                            <ion-label>Asteroids</ion-label>
+                        </ion-tab-button>
+                    
+                        <ion-tab-button href="index.html">
+                            <ion-icon name="home-outline"></ion-icon>
+                            <ion-label>Home</ion-label>
+                        </ion-tab-button>
+
+                        <ion-tab-button href="imgInfo.html">
+                            <ion-icon name="planet-outline"></ion-icon>
+                            <ion-label>Pictures</ion-label>
+                        </ion-tab-button>
+                    
+                        <ion-tab-button href="news.html">
+                            <ion-icon name="newspaper-outline"></ion-icon>
+                            <ion-label>News</ion-label>
+                        </ion-tab-button>
+                    </ion-item>
+                </ion-list> 
+            </div>
 
         </ion-content>
         

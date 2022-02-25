@@ -12,10 +12,10 @@
 <body>
    
     <ion-app>
-        
+        <!--header starts-->
         <ion-header>
             <ion-toolbar color="dark">
-                
+                <!--logo-->
                 <ion-avatar slot="start">
                     <img src="Photos/logo.png">
                 </ion-avatar>
@@ -23,10 +23,13 @@
             </ion-toolbar>
         </ion-header>
 
+        <!--content starts-->
         <ion-content color="light">
+
+            <!--search bar-->
             <ion-searchbar show-cancel-button="focus" placeholder="Enter keywords"></ion-searchbar>
  
-
+            <!--news cards-->
             <ion-card>
                 <ion-card-header>
                     <ion-card-title class="small ion-text-center"><h5>SpaceX Falcon 9 rockets scheduled to launch five Starlink missions in a row</h5></ion-card-title>
@@ -56,13 +59,15 @@
                     <ion-card-title class="small ion-text-center"><h5>"Space Force procurement command trying to bring ‘unity of effort’ to space programs"</h5></ion-card-title>
                 </ion-card-header>
 
-                <ion-card-content>
+                <ion-card-content style="margin-bottom:20%;">
                     <ion-img id="img-of-the-day" src="https://spacenews.com/wp-content/uploads/2022/02/IMG_3754-scaled.jpg"></ion-img>
                     <p class="ion-text-center"><br>"Claire Leon, a former Boeing executive who previously led the national security space launch program, is now in charge of a new office that will coordinate military space programs."</p>
                     <p class="ion-text-right"><a href="https://spacenews.com/space-force-procurement-command-trying-to-bring-unity-of-effort-to-space-programs/">Read more </a></p>
                 </ion-card-content>
             </ion-card>
 
+            <!--botttom nav bar-->
+            <div style="bottom:0; position:fixed; z-index:150; width:100%; _position:absolute;">
             <ion-list>     
                 <ion-item>       
                     <ion-tab-button href="asteroids.html">
@@ -87,7 +92,7 @@
                 </ion-item>
                 
             </ion-list> 
-
+        </div>
         </ion-content>
         
     </ion-app>
