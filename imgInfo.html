@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPACE App</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+<body>
+   
+    <ion-app>
+        
+        <ion-header>
+            <ion-toolbar color="dark">
+                
+                <ion-avatar slot="start">
+                    <img src="transparent-planet-icon-saturn-icon-space-icon-5da861f4cd5cf5.2981921115713162128412.png">
+                </ion-avatar>
+                <ion-title>SPACE App</ion-title>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content color="light">            
+            <ion-list>
+                <ion-list-header>
+                    <h4 class="ion-text-center">Choose the date</h4>
+                </ion-list-header>
+                <ion-item>
+                    <ion-label>Day</ion-label>
+                        <ion-select value="day" interface="popover" id="dayVal">
+                            <ion-select-option value="01">01</ion-select-option>
+                            <ion-select-option value="02">02</ion-select-option>
+                            <ion-select-option value="03">03</ion-select-option>
+                            <ion-select-option value="04">04</ion-select-option>
+                            <ion-select-option value="05">05</ion-select-option>
+                            <ion-select-option value="06">06</ion-select-option>
+                            <ion-select-option value="07">07</ion-select-option>
+                            <ion-select-option value="08">08</ion-select-option>
+                            <ion-select-option value="09">09</ion-select-option>
+                            <ion-select-option value="10">10</ion-select-option>
+                            <ion-select-option value="11">11</ion-select-option>
+                            <ion-select-option value="12">12</ion-select-option>
+                            <ion-select-option value="13">13</ion-select-option>
+                            <ion-select-option value="14">14</ion-select-option>
+                            <ion-select-option value="15">15</ion-select-option>
+                            <ion-select-option value="16">16</ion-select-option>
+                            <ion-select-option value="17">17</ion-select-option>
+                            <ion-select-option value="18">18</ion-select-option>
+                            <ion-select-option value="19">19</ion-select-option>
+                            <ion-select-option value="20">20</ion-select-option>
+                            <ion-select-option value="21">21</ion-select-option>
+                            <ion-select-option value="22">22</ion-select-option>
+                            <ion-select-option value="23">23</ion-select-option>
+                            <ion-select-option value="24">24</ion-select-option>
+                            <ion-select-option value="25">25</ion-select-option>
+                            <ion-select-option value="26">26</ion-select-option>
+                            <ion-select-option value="27">27</ion-select-option>
+                            <ion-select-option value="28">28</ion-select-option>
+                            <ion-select-option value="29">29</ion-select-option>
+                            <ion-select-option value="30">30</ion-select-option>
+                            <ion-select-option value="31">31</ion-select-option>
+                        </ion-select>
+
+                    <ion-label>Month</ion-label>
+                        <ion-select value="date" interface="popover" id="monthVal">
+                            <ion-select-option value="01">01</ion-select-option>
+                            <ion-select-option value="02">02</ion-select-option>
+                            <ion-select-option value="03">03</ion-select-option>
+                            <ion-select-option value="04">04</ion-select-option>
+                            <ion-select-option value="05">05</ion-select-option>
+                            <ion-select-option value="06">06</ion-select-option>
+                            <ion-select-option value="07">07</ion-select-option>
+                            <ion-select-option value="08">08</ion-select-option>
+                            <ion-select-option value="09">09</ion-select-option>
+                            <ion-select-option value="10">10</ion-select-option>
+                            <ion-select-option value="11">11</ion-select-option>
+                            <ion-select-option value="12">12</ion-select-option>
+
+
+                        </ion-select>
+
+                    <ion-label>Year</ion-label>
+                        <ion-select value="month" interface="popover" id="yearVal">
+                            <ion-select-option value="2020">2020</ion-select-option>
+                            <ion-select-option value="2021">2021</ion-select-option>
+                            <ion-select-option value="2022">2022</ion-select-option>
+                        </ion-select>
+                </ion-item>
+            </ion-list>
+            <ion-item>
+                <ion-row>
+                    <ion-col size="6"></ion-col>
+                    <ion-col size="6">
+                        <ion-button color="dark" id="btn-find-picture">Find the picture</ion-button>
+                    </ion-col>
+                    <ion-col size="6"></ion-col>
+            </ion-item>
+
+            <ion-card>
+                <ion-card-header>
+                    <p class="ion-text-right">23/02/2022</p>
+                    <ion-card-title id="img-title" class="small ion-text-center">Orion over Green Bank <br> by Dave Green</ion-card-title>
+                </ion-card-header>
+
+                <ion-card-content>
+                    <ion-img id="img-of-the-day" src="img-placeholder.jpeg"></ion-img>
+                    <p><br><b>Explanation:</b><br> What will the huge Green Bank Telescope discover tonight? Pictured, the Robert C. Byrd Green Bank Telescope (GBT) on the lower right is the largest fully-pointable single-dish radio telescope in the world. With a central dish larger than a football field, the GBT is nestled in the hills of West Virginia, USA in a radio quiet zone where the use of cell phones, WiFi emitters, and even microwave ovens are limited. The GBT explores our universe not only during the night -- but during the day, too, since the daytime sky is typically dark in radio waves. Taken in late January, the featured image was planned for months to get the setting location of Orion just right. The image is a composite of a foreground shot taken over a kilometer away from the GBT, and a background shot built up of long exposures during the previous night. The deep background image of Orion is fitting because the GBT is famous for, among many discoveries, mapping the unusual magnetic field in the Orion Molecular Cloud Complex.</p>
+
+                </ion-card-content>
+            </ion-card>
+
+            <ion-list>     
+                <ion-item>       
+                    <ion-tab-button href="asteroids.html">
+                        <ion-icon name="rocket-outline"></ion-icon>
+                        <ion-label>Asteroids</ion-label>
+                    </ion-tab-button>
+                
+                    <ion-tab-button href="index.html">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <ion-label>Home</ion-label>
+                    </ion-tab-button>
+
+                    <ion-tab-button href="imgInfo.html">
+                        <ion-icon name="planet-outline"></ion-icon>
+                        <ion-label>Pictures</ion-label>
+                    </ion-tab-button>
+                
+                    <ion-tab-button href="news.html">
+                        <ion-icon name="newspaper-outline"></ion-icon>
+                        <ion-label>News</ion-label>
+                    </ion-tab-button>
+                </ion-item>
+                
+            </ion-list> 
+
+        </ion-content>
+        
+    </ion-app>
+     
+</body>
+</html>

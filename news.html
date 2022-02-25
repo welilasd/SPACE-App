@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPACE App</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+<body>
+   
+    <ion-app>
+        
+        <ion-header>
+            <ion-toolbar color="dark">
+                
+                <ion-avatar slot="start">
+                    <img src="transparent-planet-icon-saturn-icon-space-icon-5da861f4cd5cf5.2981921115713162128412.png">
+                </ion-avatar>
+                <ion-title>SPACE App</ion-title>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content color="light">
+            <ion-searchbar show-cancel-button="focus" placeholder="Enter keywords"></ion-searchbar>
+ 
+
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title class="small ion-text-center"><h5>SpaceX Falcon 9 rockets scheduled to launch five Starlink missions in a row</h5></ion-card-title>
+                </ion-card-header>
+
+                <ion-card-content>
+                    <ion-img id="img-of-the-day" src="https://www.teslarati.com/wp-content/uploads/2020/06/Starlink-V1-L8-Falcon-9-B1059-LC40-061220-Richard-Angle-prelaunch-4-c.jpg"></ion-img>
+                    <p class="ion-text-center"><br>In lieu of commercial missions ready to fly, SpaceX Falcon 9 rockets are currently scheduled to launch at least five batches of...</p>
+                    <p class="ion-text-right"><a href="https://www.teslarati.com/spacex-falcon-9-five-starlink-launches-in-a-row/">Read more </a></p>
+                </ion-card-content>
+            </ion-card>
+
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title class="small ion-text-center"><h5>U.S. and Europe say space cooperation with Russia not affected yet by Ukraine crisis</h5></ion-card-title>
+                </ion-card-header>
+
+                <ion-card-content>
+                    <ion-img id="img-of-the-day" src="https://spacenews.com/wp-content/uploads/2022/02/maxar-russiantroops.jpg"></ion-img>
+                    <p class="ion-text-center"><br>American and European officials said Feb. 23 that space cooperation with Russia remains unaffected even as that country continues to threaten a full-scale invasion of Ukraine.</p>
+                    <p class="ion-text-right"><a href="https://spacenews.com/u-s-and-europe-say-space-cooperation-with-russia-not-affected-yet-by-ukraine-crisis/">Read more </a></p>
+                </ion-card-content>
+            </ion-card>
+
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title class="small ion-text-center"><h5>"Space Force procurement command trying to bring ‘unity of effort’ to space programs"</h5></ion-card-title>
+                </ion-card-header>
+
+                <ion-card-content>
+                    <ion-img id="img-of-the-day" src="https://spacenews.com/wp-content/uploads/2022/02/IMG_3754-scaled.jpg"></ion-img>
+                    <p class="ion-text-center"><br>"Claire Leon, a former Boeing executive who previously led the national security space launch program, is now in charge of a new office that will coordinate military space programs."</p>
+                    <p class="ion-text-right"><a href="https://spacenews.com/space-force-procurement-command-trying-to-bring-unity-of-effort-to-space-programs/">Read more </a></p>
+                </ion-card-content>
+            </ion-card>
+
+            <ion-list>     
+                <ion-item>       
+                    <ion-tab-button href="asteroids.html">
+                        <ion-icon name="rocket-outline"></ion-icon>
+                        <ion-label>Asteroids</ion-label>
+                    </ion-tab-button>
+                
+                    <ion-tab-button href="index.html">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <ion-label>Home</ion-label>
+                    </ion-tab-button>
+
+                    <ion-tab-button href="imgInfo.html">
+                        <ion-icon name="planet-outline"></ion-icon>
+                        <ion-label>Pictures</ion-label>
+                    </ion-tab-button>
+                
+                    <ion-tab-button href="news.html">
+                        <ion-icon name="newspaper-outline"></ion-icon>
+                        <ion-label>News</ion-label>
+                    </ion-tab-button>
+                </ion-item>
+                
+            </ion-list> 
+
+        </ion-content>
+        
+    </ion-app>
+    <script src="app.js"></script>
+     
+</body>
+</html>
