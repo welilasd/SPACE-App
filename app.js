@@ -5,7 +5,7 @@ const imageInfo = document.querySelector('#img-info');
 const imageAuthor = document.querySelector('#img-author');
 
 //Picture information from The Astronomy Picture of the Day API
-const pictures = `https://api.nasa.gov/planetary/apod?api_key=3CI8CnF7E6wnqAFTQaXaFjs01Q1HBZJCSFqYVg42`;
+let pictures = `https://api.nasa.gov/planetary/apod?api_key=3CI8CnF7E6wnqAFTQaXaFjs01Q1HBZJCSFqYVg42`;
 
 //let pictureName = "";
 
@@ -37,4 +37,32 @@ function updateDisplay(jsonObj){
 
 function reportError(anError){
     console.log(anError);
+}
+
+const dayInput = document.querySelector('#dayVal');
+const monthInput = document.querySelector('#monthVal');
+const yearInput = document.querySelector('#yearVal');
+
+const outputLabel = document.querySelector('#lbl-output');
+
+const makeDate = document.querySelector('#btn-date');
+const findPicture = document.querySelector('#btn-find-picture');
+
+makeDate.addEventListener('click', writeDate);
+
+let theDate = "2022-01-01";
+
+function writeDate()
+{
+    theDate = yearInput.value + "-" + monthInput.value + "-"  + dayInput.value;
+    console.log(theDate);
+    outputLabel.textContent = theDate;
+}
+
+findPicture.addEventListener('click', changePicture);
+
+function changePicture(){
+    pictures = `https://api.nasa.gov/planetary/apod?api_key=3CI8CnF7E6wnqAFTQaXaFjs01Q1HBZJCSFqYVg42&date=2022-02-02&concept_tags=True`;
+    initData();
+    console.log(jsonObj);
 }
