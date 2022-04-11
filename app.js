@@ -48,21 +48,24 @@ const outputLabel = document.querySelector('#lbl-output');
 const makeDate = document.querySelector('#btn-date');
 const findPicture = document.querySelector('#btn-find-picture');
 
-makeDate.addEventListener('click', writeDate);
+//makeDate.addEventListener('click', writeDate);
 
-let theDate = "2022-01-01";
 
-function writeDate()
+
+/*function writeDate()
 {
     theDate = yearInput.value + "-" + monthInput.value + "-"  + dayInput.value;
     console.log(theDate);
     outputLabel.textContent = theDate;
-}
+}*/
 
 findPicture.addEventListener('click', changePicture);
 
 function changePicture(){
-    pictures = `https://api.nasa.gov/planetary/apod?api_key=3CI8CnF7E6wnqAFTQaXaFjs01Q1HBZJCSFqYVg42&date=2022-02-02&concept_tags=True`;
+    let theDate = "";
+    theDate = yearInput.value + "-" + monthInput.value + "-"  + dayInput.value;
+
+    pictures = `https://api.nasa.gov/planetary/apod?api_key=3CI8CnF7E6wnqAFTQaXaFjs01Q1HBZJCSFqYVg42&date=` + theDate + `&concept_tags=True`;
     initData();
     console.log(jsonObj);
 }
