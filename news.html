@@ -27,17 +27,18 @@
         <ion-content color="light">
 
             <!--search bar-->
-            <ion-searchbar show-cancel-button="focus" placeholder="Enter keywords"></ion-searchbar>
+            <ion-searchbar id="searchbar" show-cancel-button="focus" placeholder="Enter keywords"></ion-searchbar>
  
             <!--news cards-->
+            <ion-list id="list-output"></ion-list>
             <ion-card>
                 <ion-card-header>
-                    <ion-card-title class="small ion-text-center"><h5>SpaceX Falcon 9 rockets scheduled to launch five Starlink missions in a row</h5></ion-card-title>
+                    <ion-card-title id="news-title" class="small ion-text-center"><h5>SpaceX Falcon 9 rockets scheduled to launch five Starlink missions in a row</h5></ion-card-title>
                 </ion-card-header>
 
                 <ion-card-content>
-                    <ion-img id="img-of-the-day" src="https://www.teslarati.com/wp-content/uploads/2020/06/Starlink-V1-L8-Falcon-9-B1059-LC40-061220-Richard-Angle-prelaunch-4-c.jpg"></ion-img>
-                    <p class="ion-text-center"><br>In lieu of commercial missions ready to fly, SpaceX Falcon 9 rockets are currently scheduled to launch at least five batches of...</p>
+                    <ion-img id="news-img" src="https://www.teslarati.com/wp-content/uploads/2020/06/Starlink-V1-L8-Falcon-9-B1059-LC40-061220-Richard-Angle-prelaunch-4-c.jpg"></ion-img>
+                    <p id="news-info" class="ion-text-center"><br>In lieu of commercial missions ready to fly, SpaceX Falcon 9 rockets are currently scheduled to launch at least five batches of...</p>
                     <p class="ion-text-right"><a href="https://www.teslarati.com/spacex-falcon-9-five-starlink-launches-in-a-row/">Read more </a></p>
                 </ion-card-content>
             </ion-card>
@@ -96,7 +97,7 @@
         </ion-content>
         
     </ion-app>
-    <script src="app.js"></script>
+    <script src="news.js"></script>
      
 </body>
 </html>
