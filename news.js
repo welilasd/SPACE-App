@@ -7,7 +7,8 @@ const newsInfo = document.querySelector('#news-info');
 const outputList = document.getElementById("list-output");
 
 //Picture information from The Astronomy Picture of the Day API
-let news = `https://api.spaceflightnewsapi.net/v3/articles?_limit=10&title_contains=space`;
+//let news = `https://api.spaceflightnewsapi.net/v3/articles?_limit=10&title_contains=space`;
+let news = `https://api.spaceflightnewsapi.net/v3/articles?_limit=10`;
 
 //let pictureName = "";
 
@@ -90,6 +91,12 @@ function reportError(anError){
     
 }
 
+function searchInput()
+{
+    let output = searchbarInput.value;
+    console.log(output);
+}
+/*
 function makeDetailsList(aNewsObj){
     let characterPropertyList = ["birthday", "nickname", "portrayed", "status"];
   
@@ -101,3 +108,4 @@ function makeDetailsList(aNewsObj){
       outputList.appendChild(newItem);
     }
 }
+*/
