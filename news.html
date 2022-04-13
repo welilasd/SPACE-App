@@ -27,8 +27,18 @@
         <ion-content color="light">
 
             <!--search bar-->
-            <ion-searchbar id="searchbar" clear-icon="string" show-cancel-button="focus" placeholder="Enter keywords"></ion-searchbar>
-            <ion-button id="btn-search">search</ion-button>
+           
+                <ion-row>
+                    
+        <ion-col size="10" style="padding-right: 0%;">
+            <ion-searchbar style="padding-right: 0%;" id="searchbar" search-icon="string" show-cancel-button="never" placeholder="Enter keywords"></ion-searchbar>
+        </ion-col>
+        <ion-col size="1" style="padding-left: 0%;">
+            <ion-button id="btn-search" style="height:70%; margin: 40% 40% 0% 0%; padding:0% 5% 0% 0%;" color="dark"><ion-icon slot="icon-only" name="search"></ion-icon></ion-button>
+        </ion-col>
+        
+        </ion-row>
+    
             <!--news cards-->
             <ion-list id="list-output" style="margin-bottom: 20%";></ion-list>
             <!--
