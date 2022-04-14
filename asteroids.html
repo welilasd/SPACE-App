@@ -27,30 +27,41 @@
         <ion-content color="light">
            
             <!--asteroids list-->
-            <ion-list id="output-list"> 
+
+            <!------------>
+            
+        
+                
+            <!------------>
+<!--
+            <ion-list> 
                 <ion-list-header>
                     <h4 class="ion-text-center">Check out our Asteroids Database</h4>
                 </ion-list-header>
 
-                <!--decades-->
-                <!--
-                <ion-item id="decades-1" button onclick="buttonClick()" detail>
-                    <ion-label>
-                        <h2>1900-1950</h2>
-                    </ion-label>
+                decades
+                
+                <ion-item>
+                    <button iid="decades-1" item-right>
+                    <ion-list id="">
+                        <ion-list-header>
+                            <h5 class="ion-text-center">1900-1950</h5>
+                        </ion-list-header>
+                    </ion-list>
+                    </button>
                 </ion-item>
-                <ion-item id="decades-2" button onclick="buttonClick()" detail>
+                <ion-item id="decades-2">
                     <ion-label>
                         <h2>1951-2000</h2>
                     </ion-label>
 
                 </ion-item>
-                <ion-item id="decades-3" button onclick="buttonClick()" detail>
+                <ion-item id="decades-3">
                     <ion-label>
                         <h2>2001-2050</h2>
                     </ion-label>
                 </ion-item>
-            -->
+            
 
                     <!--more detailed dates-->
                     <!--
@@ -74,7 +85,16 @@
                     </ion-label>
                 </ion-item>
             -->
-        </ion-list>
+
+            <ion-item>
+                <ion-label>Search by year</ion-label>
+                 <ion-button id="view-details">Default<ion-icon slot="end" name="star"></ion-icon></ion-button>
+            </ion-item>
+            <ion-list id="output-list"></ion-list>
+
+
+
+
                 <!--search by year-->
                 <ion-item style="margin-bottom:20%;">
                     <ion-label position="floating">Search by year</ion-label>
