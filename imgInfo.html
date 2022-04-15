@@ -103,7 +103,7 @@
             </ion-item>
 
             <!--picture of the day-->
-            <ion-card style="margin-bottom:20%;">
+            <ion-card>
                 <ion-card-header>
                     <p id="img-date" class="ion-text-right"></p>
                     <ion-card-title id="img-title" class="small ion-text-center"></ion-card-title>
@@ -116,6 +116,14 @@
                     <p id="img-info"></p>
                 </ion-card-content>
             </ion-card>
+
+            <!--Save pic-->
+            <div style="margin-bottom:20%;">
+                <ion-button id="btn-save-local" color="dark" expand="block">Save Picture</ion-button>
+                <ion-button id="btn-get-local" color="dark" expand="block">See Saved Pictures</ion-button>
+                <p></p>
+                <ion-list id="output-image"></ion-list>
+            </div>
 
             <!--botttom nav bar-->
             <div style="bottom:0; position:fixed; z-index:150; width:100%; _position:absolute;">
