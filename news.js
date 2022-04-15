@@ -9,10 +9,7 @@ const outputList = document.getElementById("list-output");
 const searchButton = document.querySelector('#btn-search');
 
 //Picture information from The Astronomy Picture of the Day API
-//let news = `https://api.spaceflightnewsapi.net/v3/articles?_limit=10&title_contains=space`;
 let news = `https://api.spaceflightnewsapi.net/v3/articles?_limit=10`;
-
-//let pictureName = "";
 
 //Initialise the app with data to produce a select for the characters
 initData();
@@ -23,32 +20,30 @@ function initData(){
 }
 
 
-
 function getJson(aResponse){  //fetch response from API
     return aResponse.json();
 }
 
 
-
 function updateDisplay(jsonObj){ 
     let newsObjArray = jsonObj;
 
+    //dynamically created news cards
     for (let aNewsObj of newsObjArray){
         let newsObj = aNewsObj;
-    //for (let i=0; i<10; i++){
+
         const newCardNews = document.createElement('ion-card');
         newCardNews.setAttribute("style", "margin-bottom:5%;");
-
         const newCardHeader = document.createElement('ion-card-header');
 
         const cardTitle = document.createElement('ion-card-title');
-        cardTitle.className = "small ion-text-center"; //Assign div class
+        cardTitle.className = "small ion-text-center"; //Assign class
 
         const newCardContent = document.createElement('ion-card-content');
         newCardContent.setAttribute("style", "margin-bottom:5%;");
 
         const cardImage = document.createElement('ion-img');
-        cardImage.setAttribute("style", "margin-bottom:5%;"); //Set div attributes
+        cardImage.setAttribute("style", "margin-bottom:5%;"); //Set attributes
 
         const newsInfo = document.createElement('p');
         newsInfo.className = "ion-text-center";
@@ -59,12 +54,6 @@ function updateDisplay(jsonObj){
 
         const link = document.createElement('a');
 
-
-        //const cardTitle = document.createElement('ion-card-title');
-
-        //for (let aNewsObj of newsObjArray){
-          //  let newsObj = aNewsObj;
-            //makeDetailsList(newsObj);
             outputList.appendChild(newCardNews);
             newCardNews.appendChild(newCardHeader);
             newCardHeader.appendChild(cardTitle);
@@ -79,12 +68,10 @@ function updateDisplay(jsonObj){
             cardImage.src = newsObj.imageUrl;
             newsInfo.textContent = newsObj.summary;
             link.href = newsObj.url;
-            link.innerHTML = "Read more";
-            
+            link.innerHTML = "Read more";  
     }
     console.log(newsObjArray);    
 }
-
 
 
 function reportError(anError){
@@ -98,27 +85,15 @@ function searchInput()
     let output = searchbarInput.value;
     console.log(output);
 }
-/*
-function makeDetailsList(aNewsObj){
-    let characterPropertyList = ["birthday", "nickname", "portrayed", "status"];
-  
-    for (let characterProperty of characterPropertyList){
-      const newItem = document.createElement('ion-item');
-      let outputText = characterProperty.toUpperCase() + ":   " + aNewsObj[characterProperty];
-      newItem.textContent = outputText;
-  
-      outputList.appendChild(newItem);
-    }
-}
-*/
 
+// displaying search results
 searchButton.addEventListener('click', searchEventFired);
-
 
 function searchEventFired() {
     let searchValue = "";
     searchValue = searchbar.value;
 
+    //chaanging the API link
     news = `https://api.spaceflightnewsapi.net/v3/articles?_limit=10&title_contains=` + searchValue;
 
     removeAllListItems(); //remove all previous list items

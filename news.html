@@ -26,60 +26,23 @@
         <!--content starts-->
         <ion-content color="light">
 
-            <!--search bar-->
+        <!--search bar-->
            
-                <ion-row>
-                    
-        <ion-col size="10" style="padding-right: 0%;">
-            <ion-searchbar style="padding-right: 0%;" id="searchbar" search-icon="string" show-cancel-button="never" placeholder="Enter keywords"></ion-searchbar>
-        </ion-col>
-        <ion-col size="1" style="padding-left: 0%;">
-            <ion-button id="btn-search" style="height:70%; margin: 40% 40% 0% 0%; padding:0% 5% 0% 0%;" color="dark"><ion-icon slot="icon-only" name="search"></ion-icon></ion-button>
-        </ion-col>
-        
+        <ion-row>          
+            <ion-col size="10" style="padding-right: 0%;">
+                <ion-searchbar style="padding-right: 0%;" id="searchbar" search-icon="string" show-cancel-button="never" placeholder="Enter keywords"></ion-searchbar>
+            </ion-col>
+            <ion-col size="1" style="padding-left: 0%;">
+                <ion-button id="btn-search" style="height:70%; margin: 40% 40% 0% 0%; padding:0% 5% 0% 0%;" color="dark"><ion-icon slot="icon-only" name="search"></ion-icon></ion-button>
+            </ion-col>
         </ion-row>
     
-            <!--news cards-->
-            <ion-list id="list-output" style="margin-bottom: 20%";></ion-list>
-            <!--
-            <ion-card>
-                <ion-card-header>
-                    <ion-card-title id="news-title" class="small ion-text-center"><h5>SpaceX Falcon 9 rockets scheduled to launch five Starlink missions in a row</h5></ion-card-title>
-                </ion-card-header>
+        <!--dynamically created news cards-->
+        <ion-list id="list-output" style="margin-bottom: 20%";></ion-list>
+       
 
-                <ion-card-content>
-                    <ion-img id="news-img" src="https://www.teslarati.com/wp-content/uploads/2020/06/Starlink-V1-L8-Falcon-9-B1059-LC40-061220-Richard-Angle-prelaunch-4-c.jpg"></ion-img>
-                    <p id="news-info" class="ion-text-center"><br>In lieu of commercial missions ready to fly, SpaceX Falcon 9 rockets are currently scheduled to launch at least five batches of...</p>
-                    <p class="ion-text-right"><a href="https://www.teslarati.com/spacex-falcon-9-five-starlink-launches-in-a-row/">Read more </a></p>
-                </ion-card-content>
-            </ion-card>
-
-            <ion-card>
-                <ion-card-header>
-                    <ion-card-title class="small ion-text-center"><h5>U.S. and Europe say space cooperation with Russia not affected yet by Ukraine crisis</h5></ion-card-title>
-                </ion-card-header>
-
-                <ion-card-content>
-                    <ion-img id="img-of-the-day" src="https://spacenews.com/wp-content/uploads/2022/02/maxar-russiantroops.jpg"></ion-img>
-                    <p class="ion-text-center"><br>American and European officials said Feb. 23 that space cooperation with Russia remains unaffected even as that country continues to threaten a full-scale invasion of Ukraine.</p>
-                    <p class="ion-text-right"><a href="https://spacenews.com/u-s-and-europe-say-space-cooperation-with-russia-not-affected-yet-by-ukraine-crisis/">Read more </a></p>
-                </ion-card-content>
-            </ion-card>
-
-            <ion-card>
-                <ion-card-header>
-                    <ion-card-title class="small ion-text-center"><h5>"Space Force procurement command trying to bring ‘unity of effort’ to space programs"</h5></ion-card-title>
-                </ion-card-header>
-
-                <ion-card-content style="margin-bottom:20%;">
-                    <ion-img id="img-of-the-day" src="https://spacenews.com/wp-content/uploads/2022/02/IMG_3754-scaled.jpg"></ion-img>
-                    <p class="ion-text-center"><br>"Claire Leon, a former Boeing executive who previously led the national security space launch program, is now in charge of a new office that will coordinate military space programs."</p>
-                    <p class="ion-text-right"><a href="https://spacenews.com/space-force-procurement-command-trying-to-bring-unity-of-effort-to-space-programs/">Read more </a></p>
-                </ion-card-content>
-            </ion-card>
-        -->
-            <!--botttom nav bar-->
-            <div style="bottom:0; position:fixed; z-index:150; width:100%; _position:absolute;">
+        <!--botttom nav bar-->
+        <div style="bottom:0; position:fixed; z-index:150; width:100%; _position:absolute;">
             <ion-list>     
                 <ion-item>       
                     <ion-tab-button href="asteroids.html">
@@ -102,7 +65,6 @@
                         <ion-label>News</ion-label>
                     </ion-tab-button>
                 </ion-item>
-                
             </ion-list> 
         </div>
         </ion-content>
