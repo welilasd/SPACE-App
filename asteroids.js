@@ -19,11 +19,13 @@ searchButton3.addEventListener('click', searchEventFired3);
 searchButton4.addEventListener('click', searchEventFired4);
 
 //Picture information from The Astronomy Picture of the Day API
-//let asteroids = `https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=3CI8CnF7E6wnqAFTQaXaFjs01Q1HBZJCSFqYVg42`;
 let asteroids = `https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=3CI8CnF7E6wnqAFTQaXaFjs01Q1HBZJCSFqYVg42`;
 let searchValue = "2005-03-08";
-//let asteroids = `https://api.nasa.gov/neo/rest/v1/feed?start_date=` + searchValue + `&end_date=` + searchValue + `&api_key=3CI8CnF7E6wnqAFTQaXaFjs01Q1HBZJCSFqYVg42`;
-//let pictureName = "";
+
+let astObj = "";
+let aAstObj = "";
+let astObjArray = "";
+let astObjDate = ""; 
 
 //Initialise the app with data to produce a select for the characters
 initData();
@@ -34,78 +36,44 @@ function initData(){
 }
 
 
-
 function getJson(aResponse){  //fetch response from API
     return aResponse.json();
 }
 
-let astObj = "";
-let aAstObj = "";
-let astObjArray = "";
-let astObjDate = ""; 
-
 function updateDisplay(jsonObj){ 
-    
-    //astObjArray = jsonObj //.near_earth_objects[0].close_approach_data;
-    
-    astObjArray = jsonObj//.near_earth_objects[searchValue][0].close_approach_data[0];//.near_earth_objects[0].close_approach_data;
+    astObjArray = jsonObj;
     console.log(astObjArray);
-    
-    
-/*
-    for (aAstObj of astObjArray){
-        astObj = aAstObj;
-
-        
-    const newItem = document.createElement('ion-item');
-    outputList.appendChild(newItem);
-    astObjDate = astObj.close_approach_date;
-
-    console.log(astObjDate);
-    newItem.textContent = astObjDate; 
-}*/
 }
-
 
 
 function reportError(anError){
     let error = anError;
-
-        //presentAlert(error);
-        console.log(error);
-    
+    console.log(error);
 }
 
 
 function searchEventFired1(){
-    removeAllListItems();  //remove all previous list items
+    removeAllListItems(); 
+
+    //change API link
     asteroids = `https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=3CI8CnF7E6wnqAFTQaXaFjs01Q1HBZJCSFqYVg42`;
     initData();
 
-
     let astObjArray1 = astObjArray.near_earth_objects[0].close_approach_data;
-
-    //astObjDate = astObj.close_approach_date;
-    /*let yyyy = "";
-    let mm = "";
-    let dd = "";
-    let date = yyyy + "-" + mm + "-" + dd;
-
-    if ((yyyy >= 1900) && (yyyy<=1950)){
-    if (astObjDate == date){*/
-
-        for (aAstObj of astObjArray1){
-            astObj = aAstObj;
     
-            const newItem = document.createElement('ion-item');
-            newItem.setAttribute("style", "margin-left:5%;");
-            outputList1.appendChild(newItem);
+    //dynamically created lists of asteroids dates
+    for (aAstObj of astObjArray1){
+        astObj = aAstObj;
+    
+        const newItem = document.createElement('ion-item');
+        newItem.setAttribute("style", "margin-left:5%;");
+        outputList1.appendChild(newItem);
         
-            astObjDate = astObj.close_approach_date;
+        astObjDate = astObj.close_approach_date;
     
-            console.log(astObjDate);
-            newItem.textContent = astObjDate;
-        }
+        console.log(astObjDate);
+        newItem.textContent = astObjDate;
+    }
 }
 
 function searchEventFired2(){
@@ -133,7 +101,7 @@ function searchEventFired3(){
     removeAllListItems();  
     asteroids = `https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=3CI8CnF7E6wnqAFTQaXaFjs01Q1HBZJCSFqYVg42`;
     initData();
-    let astObjArray3 = astObjArray.near_earth_objects[0].close_approach_data;
+    let astObjArray3 = astObjArray.near_earth_objects[2].close_approach_data;
 
     for (aAstObj of astObjArray3){
         astObj = aAstObj;
@@ -153,7 +121,7 @@ function searchEventFired4(){
     removeAllListItems();
     asteroids = `https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=3CI8CnF7E6wnqAFTQaXaFjs01Q1HBZJCSFqYVg42`;
     initData();
-    let astObjArray4 = astObjArray.near_earth_objects[0].close_approach_data;
+    let astObjArray4 = astObjArray.near_earth_objects[3].close_approach_data;
 
     for (aAstObj of astObjArray4){
         astObj = aAstObj;
@@ -169,6 +137,7 @@ function searchEventFired4(){
     }
 }
 
+//remove all previous list items
 function removeAllListItems(){
     while (outputList1.lastElementChild) {
       outputList1.removeChild(outputList1.lastElementChild);
@@ -188,40 +157,33 @@ function removeAllListItems(){
     while (outputLabel.lastElementChild) {
         outputLabel.removeChild(outputLabel.lastElementChild);
     }
-      
-  }
+}
 
-  
-  searchByYear.addEventListener('click', displayDetails);
+//search by date
 
-  
+searchByYear.addEventListener('click', displayDetails);
+
 function displayDetails() {
     removeAllListItems();
-  
+    
+    //change API link
     asteroids = `https://api.nasa.gov/neo/rest/v1/feed?start_date=` + searchValue + `&end_date=` + searchValue + `&api_key=3CI8CnF7E6wnqAFTQaXaFjs01Q1HBZJCSFqYVg42`;
     searchValue = inputLabel.value;
         
     initData();
-
     updateOutputLabel();
- 
-
 }
 
-function updateOutputLabel(){
-    //astObjArray = astObjArray.near_earth_objects[searchValue][0].close_approach_data[0];//.near_earth_objects[0].close_approach_data;
+function updateOutputLabel(){    
+    let astObjArray5 = astObjArray.near_earth_objects[searchValue][0].close_approach_data[0];
     
-    let astObjArray5 = astObjArray.near_earth_objects[searchValue][0].close_approach_data[0];//.near_earth_objects[0].close_approach_data;
-     //astObjArray5 = astObjArray.near_earth_objects["2005-03-08"][0].close_approach_data//.near_earth_objects[searchValue][0].close_approach_data[0];//.near_earth_objects[0].close_approach_data;
-    console.log(astObjArray5);
-    
-    //date
+    //date datails
     const approachDate = document.createElement('ion-item');
     approachDate.setAttribute("style", "margin-left:5%; margin-top:0%");
     outputLabel.appendChild(approachDate);
     approachDate.textContent = "Approach Date: " + astObjArray5.close_approach_date_full; 
-    //astObjArray = astObjArray.near_earth_objects[0].close_approach_data;
-    //distance
+
+    //distance details
     const astDistance = document.createElement('ion-item');
     astDistance.setAttribute("style", "margin-left:5%; margin-top:0%");
     outputLabel.appendChild(astDistance);
@@ -242,8 +204,7 @@ function updateOutputLabel(){
     outputLabel.appendChild(milDistance);
     milDistance.textContent = "Miles Distance: " + astObjArray5.miss_distance.miles;
 
-
-    //velocity
+    //velocity details
     const kmVelocity = document.createElement('ion-item');
     kmVelocity.setAttribute("style", "margin-left:5%; margin-top:0%");
     outputLabel.appendChild(kmVelocity);

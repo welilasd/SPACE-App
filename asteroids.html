@@ -23,69 +23,10 @@
             </ion-toolbar>
         </ion-header>
 
-         <!--content starts-->
+        <!--content starts-->
         <ion-content color="light">
-           
-            <!--asteroids list-->
 
-            <!------------>
-            
-        
-                
-            <!------------>
-<!--
-            <ion-list> 
-                <ion-list-header>
-                    <h4 class="ion-text-center">Check out our Asteroids Database</h4>
-                </ion-list-header>
-
-                decades
-                
-                <ion-item>
-                    <button iid="decades-1" item-right>
-                    <ion-list id="">
-                        <ion-list-header>
-                            <h5 class="ion-text-center">1900-1950</h5>
-                        </ion-list-header>
-                    </ion-list>
-                    </button>
-                </ion-item>
-                <ion-item id="decades-2">
-                    <ion-label>
-                        <h2>1951-2000</h2>
-                    </ion-label>
-
-                </ion-item>
-                <ion-item id="decades-3">
-                    <ion-label>
-                        <h2>2001-2050</h2>
-                    </ion-label>
-                </ion-item>
-            
-
-                    <!--more detailed dates-->
-                    <!--
-                    <ion-item><p>2012-Jan-31</p></ion-item>
-                    <ion-item><p>2019-Jan-15</p></ion-item>
-                    -->
-
-                        <!--details-->
-                        <!--
-                        <div class="ion-text-center">
-                            <p><b>Approach Date: </b>2019-01-15 02:18"</p>
-                            <p><b>Orbiting Body: </b>Earth</p>
-                            <p><b>Relative Velocity: </b>3.7289 km/s</p>
-                        </div>
-                    
-                    <ion-item><p><p>2025-Nov-30</p></p></ion-item>
-
-                <ion-item id="decades-4" button onclick="buttonClick()" detail>
-                    <ion-label>
-                        <h2>2051-2100</h2>
-                    </ion-label>
-                </ion-item>
-            -->
-
+           <!--decades-->
             <ion-item>
                 <ion-label>1900-1950</ion-label>
                  <ion-button id="view-details-1" color="dark"><ion-icon slot="icon-only" name="chevron-down-outline"></ion-icon></ion-button>
@@ -108,19 +49,17 @@
                 <ion-label>2051-2100</ion-label>
                  <ion-button id="view-details-4" color="dark"><ion-icon slot="icon-only" name="chevron-down-outline"></ion-icon></ion-button>
             </ion-item>
+
             <ion-list id="output-list-4"></ion-list>
 
-
-
-
-                <!--search by year-->
-                <ion-item>
-                    <ion-label position="floating">Search by year [yyyy-mm-dd]</ion-label>
-                    <ion-input id="lbl-input" type="string"></ion-input>
+            <!--search by date-->
+            <ion-item>
+                <ion-label position="floating">Search by date [yyyy-mm-dd]</ion-label>
+                <ion-input id="lbl-input" type="string"></ion-input>
             
-                    <ion-button id="btn-search" slot="end" color="dark" style="margin-top:5%;">search</ion-button>
-                </ion-item>
-                <ion-list style="margin-bottom:20%;" id="lbl-output" style="margin-bottom: 20%";></ion-list>
+                <ion-button id="btn-search" slot="end" color="dark" style="margin-top:5%;">search</ion-button>
+            </ion-item>
+            <ion-list style="margin-bottom:20%;" id="lbl-output" style="margin-bottom: 20%";></ion-list>
 
     
 
