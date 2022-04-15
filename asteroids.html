@@ -114,12 +114,13 @@
 
 
                 <!--search by year-->
-                <ion-item style="margin-bottom:20%;">
-                    <ion-label position="floating">Search by year</ion-label>
-                    <ion-input type="string"></ion-input>
+                <ion-item>
+                    <ion-label position="floating">Search by year [yyyy-mm-dd]</ion-label>
+                    <ion-input id="lbl-input" type="string"></ion-input>
             
-                    <ion-button slot="end" color="dark" style="margin-top:5%;">search</ion-button>
+                    <ion-button id="btn-search" slot="end" color="dark" style="margin-top:5%;">search</ion-button>
                 </ion-item>
+                <ion-list style="margin-bottom:20%;" id="lbl-output" style="margin-bottom: 20%";></ion-list>
 
     
 
